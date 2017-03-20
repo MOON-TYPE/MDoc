@@ -30,7 +30,6 @@ namespace MoonAntonio
 		private GUIStyle headerText;
 		private GUIStyle seccionHeader;
 		private GUIStyle tituloNegrita;
-		private GUIStyle numVersion;
 		private GUIStyle tituloWindow;
 		private GUIStyle btnBack;
 		private int smallSpace = 8;
@@ -77,7 +76,6 @@ namespace MoonAntonio
 				headerText = estilo.GetStyle("HeaderText");
 				seccionHeader = estilo.GetStyle("SeccionHeader");
 				tituloNegrita = estilo.GetStyle("TituloNegrita");
-				numVersion = estilo.GetStyle("NumVersion");
 				tituloWindow = estilo.GetStyle("TituloWindow");
 				btnBack = estilo.GetStyle("BtnBack");
 			}
