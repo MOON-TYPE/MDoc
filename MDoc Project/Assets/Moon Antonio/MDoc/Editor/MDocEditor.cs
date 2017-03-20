@@ -26,7 +26,6 @@ namespace MoonAntonio
 
 		#region Variables Privadas
 		private GUISkin estilo;
-
 		private GUIStyle wordWrapped;
 		private GUIStyle headerText;
 		private GUIStyle seccionHeader;
@@ -34,18 +33,14 @@ namespace MoonAntonio
 		private GUIStyle numVersion;
 		private GUIStyle tituloWindow;
 		private GUIStyle btnBack;
-
 		private int smallSpace = 8;
 		private int mediumSpace = 12;
 		private int largeSpace = 20;
-
 		GUILayoutOption[] btnSize = new GUILayoutOption[] { GUILayout.Width(200), GUILayout.Height(35) };
 		GUILayoutOption[] docSize = new GUILayoutOption[] { GUILayout.Width(300), GUILayout.Height(330) };
-
 		private static MenuActual menuActual;
 		private static string tituloMenu = "Menu Principal";
-
-		Vector2 scrollDocs = Vector2.zero;
+		private Vector2 scrollDocs = Vector2.zero;
 		#endregion
 
 		#region Menu
@@ -391,10 +386,13 @@ namespace MoonAntonio
 		{
 			InicioMenu();
 
-			Titulo("Titulo");
+			InicioScroll();
+
+			Titulo("Descripcion");
 			Separador();
-			Titulo("Titulo2", true);
-			Texto("Texto normal.");
+			Texto("MDoc es una herramienta para crear desde script una rapida y sencilla documentacion en poco tiempo.");
+
+			FinScroll();
 
 			FinMenu();
 		}
@@ -486,6 +484,9 @@ namespace MoonAntonio
 		private void MenuChangeLog()// Menu de los cambios realizados
 		{
 			InicioMenu();
+
+			Titulo("1.0.0");
+			Texto("Version Inicial.");
 
 			FinMenu();
 		}
