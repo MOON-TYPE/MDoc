@@ -196,6 +196,32 @@ namespace MoonAntonio
 		{
 			EditorGUILayout.LabelField(texto, seccionHeader);
 		}
+
+		/// <summary>
+		/// <para>Inicia un menu.</para>
+		/// </summary>
+		public void InicioMenu()// Inicia un menu
+		{
+			EditorGUILayout.BeginVertical();
+			GUILayout.Space(25);
+		}
+
+		/// <summary>
+		/// <para>Fin de un menu.</para>
+		/// </summary>
+		public void FinMenu()// Fin de un menu
+		{
+			EditorGUILayout.EndVertical();
+		}
+
+		/// <summary>
+		/// <para>Separador vertical.</para>
+		/// </summary>
+		public void Separador()// Separador
+		{
+			GUILayout.Space(3);
+			EditorGUILayout.LabelField("<------------------------------------>", tituloNegrita);
+		}
 		#endregion
 
 		#region Funcional
@@ -238,15 +264,14 @@ namespace MoonAntonio
 		/// </summary>
 		private void MenuPrincipal()// Menu principal de la documentacion
 		{
-			EditorGUILayout.BeginVertical();
-			GUILayout.Space(25);
+			InicioMenu();
 
 			Boton("Descripcion", MenuActual.Descripcion);
 			Boton("API", MenuActual.API,true);
 			Boton("ChangeLog", MenuActual.Changelog);
 			Boton("GitHub", MenuActual.GitHub);
 
-			EditorGUILayout.EndVertical();
+			FinMenu();
 		}
 		#endregion
 
@@ -256,7 +281,12 @@ namespace MoonAntonio
 		/// </summary>
 		private void MenuDescripcion()// Menu descriptivo de MDoc
 		{
+			InicioMenu();
+
 			Titulo("Titulo");
+			Separador();
+
+			FinMenu();
 		}
 		#endregion
 
