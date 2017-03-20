@@ -22,6 +22,7 @@ public void Boton(string nomBtn,MenuActual menu,bool espacio)
 + Crear un titulo en la documentacion
 ```C#
 public void Titulo(string texto)
+public void Titulo(string texto,bool negrita)
 ```
 
 + Crear un texto

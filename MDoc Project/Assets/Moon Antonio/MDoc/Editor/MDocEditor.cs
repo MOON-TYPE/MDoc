@@ -215,6 +215,24 @@ namespace MoonAntonio
 		}
 
 		/// <summary>
+		/// <para>Crea un titulo</para>
+		/// </summary>
+		/// <param name="texto">Texto del titulo.</param>
+		/// <param name="negrita">En negrita o normal.</param>
+		public void Titulo(string texto,bool negrita)// Crea un titulo
+		{
+			if (negrita)
+			{
+				EditorGUILayout.LabelField(texto, tituloNegrita);
+			}
+			else
+			{
+				EditorGUILayout.LabelField(texto, seccionHeader);
+			}
+			
+		}
+
+		/// <summary>
 		/// <para>Crea un texto.</para>
 		/// </summary>
 		/// <param name="texto">El texto, salto de linea \n.</param>
@@ -329,6 +347,8 @@ namespace MoonAntonio
 
 			Titulo("Titulo");
 			Separador();
+			Titulo("Titulo2", true);
+			Texto("Texto normal.");
 
 			FinMenu();
 		}
