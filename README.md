@@ -17,6 +17,7 @@ public void FinMenu()
 ```C#
 public void Boton(string nomBtn, MenuActual menu)
 public void Boton(string nomBtn,MenuActual menu,bool espacio)
+public void Boton(string texto, string url)
 ```
 
 + Crear un titulo en la documentacion

@@ -206,6 +206,21 @@ namespace MoonAntonio
 		}
 
 		/// <summary>
+		/// <para>Crea un boton para ir a una url.</para>
+		/// </summary>
+		/// <param name="texto">Texto del boton.</param>
+		/// <param name="url">Url completa.</param>
+		public void Boton(string texto, string url)// Crea un boton para ir a una url
+		{
+			EditorGUILayout.BeginHorizontal();
+			GUILayout.FlexibleSpace();
+			if (GUILayout.Button(texto, btnSize))
+				Application.OpenURL(url);
+			GUILayout.FlexibleSpace();
+			EditorGUILayout.EndHorizontal();
+		}
+
+		/// <summary>
 		/// <para>Crea un titulo</para>
 		/// </summary>
 		/// <param name="texto">Texto del titulo.</param>
