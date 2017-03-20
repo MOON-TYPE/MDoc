@@ -1,5 +1,34 @@
+[![GitHub issues](https://img.shields.io/github/issues/MOON-TYPE/MDoc.svg)](https://github.com/MOON-TYPE/MDoc/issues)
+[![UnityVersion](https://img.shields.io/badge/Unity-5.5.2p4-orange.svg)](https://unity3d.com/es)
+[![Trello](https://img.shields.io/badge/Trello-OFF-red.svg)](https://github.com/MOON-TYPE/MDoc)
+[![Slack Status](https://moonantonio.herokuapp.com/badge.svg)](https://moonantonio.herokuapp.com/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/MOON-TYPE/MDoc/master/LICENSE)
+
 # MDoc
 Herramienta para crear documentacion rapida y simple en Unity3D
+
+<p align="center"><img src="https://github.com/MOON-TYPE/MDoc/blob/master/Res/preview/preview.png?raw=true"></p>
+
+## Descripcion
+
+Herramienta para crear documentacion sobre los niveles, codigo, etc.. facil y sin grandes copilaciones.
+
+## Como usar
+
+En MDocEditor.cs
+
+* Añade al enum MenuActual todos los menus que quieras usar.(MenuDev,MenuSistema...)
+* Crea un metodo para la GUI de los menus.
+* En #region Funcional > ActualizarMenu() ingresa los nuevo menus.(Dentro del switch) y llama al metodo anterior.
+
+__(En #region Secciones Documentacion puede ver algunos ejemplos de Menus.)__
+
+En el metodo creado
+
+* Inicia el menu usando InicioMenu()
+* Escribe lo que necesites con Titulo(),Texto(),Espacio(),Imagen()..
+* Cierra el menu usando FinMenu()
+
 
 ## API
 
@@ -53,7 +82,7 @@ public void InicioScroll()
 
 + Finaliza un scroll
 ```C#
-FinScroll()
+public void FinScroll()
 ```
 
 
