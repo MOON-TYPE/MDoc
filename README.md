@@ -41,6 +41,11 @@ public void Separador()
 public void Espacio(TipoEspacio tipo)
 ```
 
++ Crea una imagen
+```C#
+public void Imagen(Texture2D texture,float width,float height)
+```
+
 
 ## Licencias & Atribuciones
 

@@ -299,6 +299,22 @@ namespace MoonAntonio
 					break;
 			}
 		}
+
+		/// <summary>
+		/// <para>Crea una imagen.</para>
+		/// </summary>
+		/// <param name="texture">Textura.</param>
+		/// <param name="width">Anchura de la imagen.</param>
+		/// <param name="height">Altura de la imagen.</param>
+		public void Imagen(Texture2D texture,float width,float height)// Crea una imagen
+		{
+			EditorGUILayout.BeginHorizontal();
+			GUILayout.FlexibleSpace();
+			GUILayout.Space(15);
+			GUILayout.Label(texture, GUILayout.Width(width), GUILayout.Height(height));
+			GUILayout.FlexibleSpace();
+			EditorGUILayout.EndHorizontal();
+		}
 		#endregion
 
 		#region Funcional
@@ -324,9 +340,6 @@ namespace MoonAntonio
 					MenuChangeLog();
 					break;
 
-				case MenuActual.GitHub:
-					MenuGitHub();
-					break;
 				default:
 					MenuPrincipal();
 					break;
@@ -346,7 +359,7 @@ namespace MoonAntonio
 			Boton("Descripcion", MenuActual.Descripcion);
 			Boton("API", MenuActual.API,true);
 			Boton("ChangeLog", MenuActual.Changelog);
-			Boton("GitHub", MenuActual.GitHub);
+			Boton("GitHub", "https://github.com/MOON-TYPE/MDoc");
 
 			FinMenu();
 		}
@@ -388,13 +401,6 @@ namespace MoonAntonio
 
 		}
 		#endregion
-
-		#region GitHub
-		private void MenuGitHub()
-		{
-
-		}
-		#endregion
 		#endregion
 
 		#region Metodos
@@ -417,8 +423,7 @@ namespace MoonAntonio
 		MenuPrincipal,
 		Descripcion,
 		API,
-		Changelog,
-		GitHub
+		Changelog
 	}
 
 	/// <summary>
