@@ -121,23 +121,22 @@ namespace MoonAntonio
 			else
 			{
 				GUILayout.Space(80);
-
-				GUILayout.Space(15);
-				EditorGUILayout.BeginVertical();
-				GUILayout.Space(14);
-				EditorGUILayout.LabelField(tituloMenu, headerText);
-				EditorGUILayout.EndVertical();
-				GUILayout.FlexibleSpace();
-				GUILayout.Space(80);
-				EditorGUILayout.EndHorizontal();
-
-				GUILayout.Space(10);
-
-				EditorGUILayout.BeginHorizontal();
-				GUILayout.FlexibleSpace();
-				ActualizarMenu();
-				GUILayout.FlexibleSpace();
 			}
+			GUILayout.Space(15);
+			EditorGUILayout.BeginVertical();
+			GUILayout.Space(14);
+			EditorGUILayout.LabelField(tituloMenu, headerText);
+			EditorGUILayout.EndVertical();
+			GUILayout.FlexibleSpace();
+			GUILayout.Space(80);
+			EditorGUILayout.EndHorizontal();
+
+			GUILayout.Space(10);
+
+			EditorGUILayout.BeginHorizontal();
+			GUILayout.FlexibleSpace();
+			ActualizarMenu();
+			GUILayout.FlexibleSpace();
 
 			EditorGUILayout.EndHorizontal();
 
@@ -187,6 +186,15 @@ namespace MoonAntonio
 			EditorGUILayout.EndHorizontal();
 
 			if(espacio) GUILayout.FlexibleSpace();
+		}
+
+		/// <summary>
+		/// <para>Crea un titulo</para>
+		/// </summary>
+		/// <param name="texto">Texto del titulo.</param>
+		public void Titulo(string texto)// Crea un titulo
+		{
+			EditorGUILayout.LabelField(texto, seccionHeader);
 		}
 		#endregion
 
@@ -248,7 +256,7 @@ namespace MoonAntonio
 		/// </summary>
 		private void MenuDescripcion()// Menu descriptivo de MDoc
 		{
-
+			Titulo("Titulo");
 		}
 		#endregion
 
