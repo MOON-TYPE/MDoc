@@ -24,6 +24,11 @@ public void Boton(string nomBtn,MenuActual menu,bool espacio)
 public void Titulo(string texto)
 ```
 
++ Crear un texto
+```C#
+public void Texto(string texto)
+```
+
 + Crea un separador standart
 ```C#
 public void Separador()

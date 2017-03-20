@@ -150,18 +150,35 @@ namespace MoonAntonio
 
 		#region API
 		/// <summary>
+		/// <para>Inicia un menu.</para>
+		/// </summary>
+		public void InicioMenu()// Inicia un menu
+		{
+			EditorGUILayout.BeginVertical();
+			GUILayout.Space(25);
+		}
+
+		/// <summary>
+		/// <para>Fin de un menu.</para>
+		/// </summary>
+		public void FinMenu()// Fin de un menu
+		{
+			EditorGUILayout.EndVertical();
+		}
+
+		/// <summary>
 		/// <para>Crea un boton.</para>
 		/// </summary>
 		/// <param name="Texto">Texto del boton.</param>
 		/// <param name="menu">Menu asignado del boton.</param>
-		public void Boton(string Texto, MenuActual menu)// Crea un boton
+		public void Boton(string texto, MenuActual menu)// Crea un boton
 		{
 			EditorGUILayout.BeginHorizontal();
 			GUILayout.FlexibleSpace();
-			if (GUILayout.Button(Texto, btnSize))
+			if (GUILayout.Button(texto, btnSize))
 			{
 				menuActual = menu;
-				tituloMenu = Texto;
+				tituloMenu = texto;
 			}
 			GUILayout.FlexibleSpace();
 			EditorGUILayout.EndHorizontal();
@@ -173,14 +190,14 @@ namespace MoonAntonio
 		/// <param name="Texto">Texto del boton.</param>
 		/// <param name="menu">Menu asignado del boton.</param>
 		/// <param name="espacio">Tiene espacio hasta el siguiente boton o va seguido.</param>
-		public void Boton(string Texto, MenuActual menu,bool espacio)// Crea un boton
+		public void Boton(string texto, MenuActual menu,bool espacio)// Crea un boton
 		{
 			EditorGUILayout.BeginHorizontal();
 			GUILayout.FlexibleSpace();
-			if (GUILayout.Button(Texto, btnSize))
+			if (GUILayout.Button(texto, btnSize))
 			{
 				menuActual = menu;
-				tituloMenu = Texto;
+				tituloMenu = texto;
 			}
 			GUILayout.FlexibleSpace();
 			EditorGUILayout.EndHorizontal();
@@ -198,20 +215,12 @@ namespace MoonAntonio
 		}
 
 		/// <summary>
-		/// <para>Inicia un menu.</para>
+		/// <para>Crea un texto.</para>
 		/// </summary>
-		public void InicioMenu()// Inicia un menu
+		/// <param name="texto">El texto, salto de linea \n.</param>
+		public void Texto(string texto)// Crea un texto
 		{
-			EditorGUILayout.BeginVertical();
-			GUILayout.Space(25);
-		}
-
-		/// <summary>
-		/// <para>Fin de un menu.</para>
-		/// </summary>
-		public void FinMenu()// Fin de un menu
-		{
-			EditorGUILayout.EndVertical();
+			EditorGUILayout.LabelField(texto, wordWrapped);
 		}
 
 		/// <summary>
