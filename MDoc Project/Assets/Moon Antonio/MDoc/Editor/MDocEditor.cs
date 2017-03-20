@@ -152,16 +152,16 @@ namespace MoonAntonio
 		/// <summary>
 		/// <para>Crea un boton.</para>
 		/// </summary>
-		/// <param name="nomBtn">Texto del boton.</param>
+		/// <param name="Texto">Texto del boton.</param>
 		/// <param name="menu">Menu asignado del boton.</param>
-		public void Boton(string nomBtn, MenuActual menu)// Crea un boton
+		public void Boton(string Texto, MenuActual menu)// Crea un boton
 		{
 			EditorGUILayout.BeginHorizontal();
 			GUILayout.FlexibleSpace();
-			if (GUILayout.Button(nomBtn, btnSize))
+			if (GUILayout.Button(Texto, btnSize))
 			{
 				menuActual = menu;
-				tituloMenu = nomBtn;
+				tituloMenu = Texto;
 			}
 			GUILayout.FlexibleSpace();
 			EditorGUILayout.EndHorizontal();
@@ -170,17 +170,17 @@ namespace MoonAntonio
 		/// <summary>
 		/// <para>Crea un boton.</para>
 		/// </summary>
-		/// <param name="nomBtn">Texto del boton.</param>
+		/// <param name="Texto">Texto del boton.</param>
 		/// <param name="menu">Menu asignado del boton.</param>
 		/// <param name="espacio">Tiene espacio hasta el siguiente boton o va seguido.</param>
-		public void Boton(string nomBtn,MenuActual menu,bool espacio)// Crea un boton
+		public void Boton(string Texto, MenuActual menu,bool espacio)// Crea un boton
 		{
 			EditorGUILayout.BeginHorizontal();
 			GUILayout.FlexibleSpace();
-			if (GUILayout.Button(nomBtn, btnSize))
+			if (GUILayout.Button(Texto, btnSize))
 			{
 				menuActual = menu;
-				tituloMenu = nomBtn;
+				tituloMenu = Texto;
 			}
 			GUILayout.FlexibleSpace();
 			EditorGUILayout.EndHorizontal();
