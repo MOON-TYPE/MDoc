@@ -23,10 +23,13 @@ namespace MoonAntonio
 		[MenuItem("Moon Antonio/MDoc", false, 0)]
 		static void InitMDoc()
 		{
-			EditorWindow window = GetWindow<MDocEditor>(true, "MDoc", true);
+			Texture icono = AssetDatabase.LoadAssetAtPath<Texture>("Assets/Moon Antonio/MDoc/Icon/mdoc.icon.png");
+			GUIContent tituloContenido = new GUIContent(" MIcaros", icono);
+
+			EditorWindow window = GetWindow<MDocEditor>();
+			window.titleContent = tituloContenido;
 			window.maxSize = new Vector2(500, 500);
 			window.minSize = new Vector2(500, 500);
-
 			window.Show();
 		}
 		#endregion
