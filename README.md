@@ -46,6 +46,16 @@ public void Espacio(TipoEspacio tipo)
 public void Imagen(Texture2D texture,float width,float height)
 ```
 
++ Inicia un scroll
+```C#
+public void InicioScroll()
+```
+
++ Finaliza un scroll
+```C#
+FinScroll()
+```
+
 
 ## Licencias & Atribuciones
 

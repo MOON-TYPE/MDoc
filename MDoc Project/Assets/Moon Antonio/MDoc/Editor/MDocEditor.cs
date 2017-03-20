@@ -44,6 +44,8 @@ namespace MoonAntonio
 
 		private static MenuActual menuActual;
 		private static string tituloMenu = "Menu Principal";
+
+		Vector2 scrollDocs = Vector2.zero;
 		#endregion
 
 		#region Menu
@@ -315,6 +317,22 @@ namespace MoonAntonio
 			GUILayout.FlexibleSpace();
 			EditorGUILayout.EndHorizontal();
 		}
+
+		/// <summary>
+		/// <para>Inicia un scroll.</para>
+		/// </summary>
+		public void InicioScroll()// Inicia un scroll
+		{
+			scrollDocs = EditorGUILayout.BeginScrollView(scrollDocs, false, false, docSize);
+		}
+
+		/// <summary>
+		/// <para>Finaliza un scroll.</para>
+		/// </summary>
+		public void FinScroll()// Finaliza un scroll
+		{
+			EditorGUILayout.EndScrollView();
+		}
 		#endregion
 
 		#region Funcional
@@ -388,7 +406,76 @@ namespace MoonAntonio
 		/// </summary>
 		private void MenuAPI()// Menu de la API de MDoc
 		{
+			InicioMenu();
 
+			InicioScroll();
+
+			Titulo("void InicioMenu()", true);
+			Texto("Inicio de un menu");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void FinMenu()", true);
+			Texto("Fin de un menu");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Boton(string nomBtn, MenuActual menu)", true);
+			Texto("Crear un boton en la documentacion");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Boton(string nomBtn,MenuActual menu,bool espacio)", true);
+			Texto("Crear un boton en la documentacion");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Boton(string texto, string url)", true);
+			Texto("Crear un boton en la documentacion");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Titulo(string texto)", true);
+			Texto("Crear un titulo en la documentacion");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Titulo(string texto,bool negrita)", true);
+			Texto("Crear un titulo en la documentacion");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Texto(string texto)", true);
+			Texto("Crear un texto");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Separador()", true);
+			Texto("Crea un separador");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Espacio(TipoEspacio tipo)", true);
+			Texto("Crea un espacio de un tipo fijado");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void Imagen(Texture2D texture,float width,float height)", true);
+			Texto("Crea una imagen");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("void InicioScroll()", true);
+			Texto("Inicia un scroll");
+
+			Espacio(TipoEspacio.Min);
+
+			Titulo("FinScroll()", true);
+			Texto("Finaliza un scroll");
+
+			FinScroll();
+
+			FinMenu();
 		}
 		#endregion
 
@@ -398,7 +485,9 @@ namespace MoonAntonio
 		/// </summary>
 		private void MenuChangeLog()// Menu de los cambios realizados
 		{
+			InicioMenu();
 
+			FinMenu();
 		}
 		#endregion
 		#endregion
