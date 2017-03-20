@@ -29,6 +29,11 @@ public void Titulo(string texto)
 public void Separador()
 ```
 
++ Crea un espacio de un tipo fijado
+```C#
+public void Espacio(TipoEspacio tipo)
+```
+
 
 ## Licencias & Atribuciones
 

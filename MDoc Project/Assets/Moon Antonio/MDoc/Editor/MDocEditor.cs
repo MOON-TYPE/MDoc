@@ -222,6 +222,41 @@ namespace MoonAntonio
 			GUILayout.Space(3);
 			EditorGUILayout.LabelField("<------------------------------------>", tituloNegrita);
 		}
+
+		/// <summary>
+		/// <para>Crea un espacio con un valor dado.</para>
+		/// </summary>
+		/// <param name="value">Valor del espacio.</param>
+		public void Espacio(float value)// Crea un espacio con un valor dado
+		{
+			GUILayout.Space(value);
+		}
+
+		/// <summary>
+		/// <para>Crea un espacio de un tipo fijado.</para>
+		/// </summary>
+		/// <param name="tipo">Tipo de espacio.[Min]8 |[Med]12 |[Max]20 .</param>
+		public void Espacio(TipoEspacio tipo)// Crea un espacio de un tipo fijado
+		{
+			switch (tipo)
+			{
+				case TipoEspacio.Min:
+					GUILayout.Space(smallSpace);
+					break;
+
+				case TipoEspacio.Med:
+					GUILayout.Space(mediumSpace);
+					break;
+
+				case TipoEspacio.Max:
+					GUILayout.Space(largeSpace);
+					break;
+
+				default:
+					GUILayout.Space(5f);
+					break;
+			}
+		}
 		#endregion
 
 		#region Funcional
@@ -340,5 +375,15 @@ namespace MoonAntonio
 		API,
 		Changelog,
 		GitHub
+	}
+
+	/// <summary>
+	/// <para>Tipo de espacio.</para>
+	/// </summary>
+	public enum TipoEspacio
+	{
+		Min,
+		Med,
+		Max
 	}
 }
