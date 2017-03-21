@@ -12,7 +12,7 @@ using UnityEngine;
 using UnityEditor;
 #endregion
 
-namespace MoonAntonio
+namespace MoonAntonio.MDoc
 {
 	/// <summary>
 	/// <para>Herramienta para crear una documentacion simple</para>
