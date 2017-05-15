@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/MOON-TYPE/MDoc/master/LICENSE)
 
 # MDoc
-Herramienta para crear documentacion rapida y simple en Unity3D
+Herramienta para crear documentacion rapida y simple en Unity3D (mediante codigo)
 
 <p align="center"><img src="https://github.com/MOON-TYPE/MDoc/blob/master/Res/preview/preview.png?raw=true"></p>
 
