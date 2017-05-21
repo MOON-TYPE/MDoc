@@ -17,7 +17,7 @@ Herramienta para crear documentacion sobre los niveles, codigo, etc.. facil y si
 
 En MDocEditor.cs
 
-* Añade al enum MenuActual todos los menus que quieras usar.(MenuDev,MenuSistema...)
+* Añade al enum MenuActual todos los menus que quieras usar.(MenuDev,MenuSistema,MenuClase ...)
 * Crea un metodo para la GUI de los menus.
 * En #region Funcional > ActualizarMenu() ingresa los nuevo menus.(Dentro del switch) y llama al metodo anterior.
 
