@@ -26,7 +26,7 @@ __(En #region Secciones Documentacion puede ver algunos ejemplos de Menus.)__
 En el metodo creado
 
 * Inicia el menu usando InicioMenu()
-* Escribe lo que necesites con Titulo(),Texto(),Espacio(),Imagen()..
+* Escribe lo que necesites con Titulo(),Texto(),Espacio(),Imagen().. de forma ordenada y lineal
 * Cierra el menu usando FinMenu()
 
 
